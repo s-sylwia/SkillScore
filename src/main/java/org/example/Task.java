@@ -13,7 +13,7 @@ public class Task {
     private LocalDate endDate;
     private boolean isDone;
 
-    public Task(String name, String description, int i, int i1) {
+    public Task(String name, String description) {
 
     }
 

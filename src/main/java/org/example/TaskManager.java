@@ -2,6 +2,7 @@ package org.example;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class TaskManager {
 
@@ -37,7 +38,13 @@ public class TaskManager {
         }
     }
 
-    public Task findTaskByName(String taskName) {
-        return null;
+    public Optional<Task> findTaskByName(String taskName) {
+        for (Task task : taskList) {
+            if (task.getName().equals(taskName)) {
+                return Optional.of(task);
+            }
+        }
+        return Optional.empty();
+
     }
 }
